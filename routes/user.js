@@ -8,7 +8,7 @@ const router = express.Router()
 router.post('/signup', async (req, res) => {
     const data = new Model({
         username: req.body.username,
-        password: req.body.pass
+        password: req.body.password
     })
 
     try {
@@ -44,7 +44,7 @@ router.get('/login', async (req,res)=>{
 
 
     } catch(error){
-        res.status(500).json({message:error.message})
+        res.status(200).json({message:error.message})
     }
 })
 
